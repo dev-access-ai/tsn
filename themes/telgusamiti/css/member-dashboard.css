@@ -1,0 +1,147 @@
+.site-main .section {
+	padding: 60px 0;
+	background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+	background-size: cover;
+}
+
+body .dashboard-grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 0;
+	margin: 0 0 30px;
+}
+
+body .dashboard-grid .dashboard-primary-container {
+	flex: 0 0 calc(100% - 320px);
+	max-width: calc(100% - 320px);
+}
+
+body .dashboard-grid .dashboard-sidebar {
+	flex: 0 0 280px;
+	margin-left: auto;
+	max-width: 280px;
+}
+
+body .dashboard-sidebar .dashboard-card {
+	padding: 30px;
+	border-radius: 0;
+	border: 0;
+	box-shadow: none;
+	margin-bottom: 30px;
+	background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+	background-size: auto 240px;
+}
+
+body .membership-details,
+body .contact-details {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+body .membership-details .detail-row,
+body .contact-card .detail-row {
+	flex: 0 0 calc(33.333% - 15px);
+	max-width: calc(33.333% - 15px);
+	padding: 20px;
+	display: block;
+	border-radius: 0;
+	text-align: left;
+	background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+	background-size: auto 240px;
+}
+
+body .contact-card .detail-row {
+	flex: 0 0 calc(50% - 15px);
+	max-width: calc(50% - 15px);
+}
+
+body .dashboard-primary-container .dashboard-card {
+	border: 0;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+	background-color: transparent;
+	margin-bottom: 30px;
+}
+
+body .dashboard-sidebar .dashboard-card.renewal-card {
+	padding: 0;
+}
+
+body .section-title {
+	margin-bottom: 10px;
+	;
+}
+
+body .section-title h3 {
+	border-bottom: 0;
+	margin-bottom: 0;
+	font-size: 28px;
+}
+
+body .tsn-member-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+body .tsn-member-actions a {
+	width: 100%;
+}
+
+.section-title h3:before,
+.section-title h3:after {
+	width: 100px;
+	background-size: 100px auto;
+}
+
+body .dashboard-sidebar .dashboard-card.renewal-card .renewal-alert {
+	font-family: 'Anton', sans-serif;
+	font-size: 16px;
+	text-align: left;
+	border-radius: 0;
+	background: #fffbf8;
+	border-left: 4px solid var(--deep-maroon);
+	padding: 20px;
+	position: relative;
+}
+
+body .renewal-alert p {
+	margin: 0 0 15px;
+}
+
+body .renewal-alert p strong {
+	font-weight: 400;
+	color: var(--deep-maroon);
+}
+
+body .member-id {
+	margin-bottom: 0;
+}
+
+body .member-id .value {
+	color: var(--deep-maroon);
+}
+
+body .detail-row .label,
+body .detail-row .value {
+	color: var(--body-text);
+	font-family: 'Anton', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 20px;
+	display: block;
+	width: 100%;
+}
+
+body .detail-row .value {
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	color: var(--body-text);
+}
+
+body .detail-row .value strong {
+	font-weight: 400;
+}

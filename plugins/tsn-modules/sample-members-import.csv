@@ -1,0 +1,6 @@
+Date,First name,Last Name,Spouse First Name,Spouse Last Name,Membership type,Membership#,Email 1,Email 2
+12/15/2024,John,Doe,Jane,Doe,Annual,TSN-1001,john.doe@example.com,
+01/20/2024,Alice,Smith,Bob,Smith,Life,,alice.smith@example.com,
+,Mike,Johnson,,,Student,TSN-ST-05,mike.j@school.edu,
+11/05/2023,Sarah,Williams,,,Annual,,sarah.w@example.com,sarah.work@example.com
+,David,Brown,Mary,Brown,Annual,,david.b@example.com,

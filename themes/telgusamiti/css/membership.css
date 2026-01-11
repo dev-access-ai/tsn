@@ -1,0 +1,280 @@
+body .tsn-membership-form-container {
+  max-width: 100%;
+}
+
+.site-main {
+  padding: 60px 0;
+  background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+  background-size: cover;
+}
+
+body .tsn-membership-intro,
+body .tsn-membership-form-section,
+body .tsn-membership-contact {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+body .tsn-membership-form-section {
+  margin: 60px auto 0;
+  padding: 40px;
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 600px;
+}
+
+.tsn-membership-intro h2,
+.tsn-membership-options h3,
+.tsn-membership-form-section h3 {
+  font-size: 42px;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.tsn-membership-form-section h3 {
+  margin-bottom: 60px;
+}
+
+.tsn-membership-intro h2:before,
+.tsn-membership-options h3:before,
+.tsn-membership-form-section h3:before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 12px;
+  background: url(../images/title-shape.svg) 0 0 no-repeat;
+  margin: 0 auto 10px;
+}
+
+
+.tsn-membership-intro h2::after,
+.tsn-membership-options h3::after,
+.tsn-membership-form-section h3::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 12px;
+  background: url(../images/title-shape.svg) 0 0 no-repeat;
+  margin: 10px auto 0;
+}
+
+.tsn-membership-intro p {
+  font-size: 20px;
+}
+
+.tsn-membership-options h3 {
+  margin-bottom: 60px;
+}
+
+body .membership-option {
+  border-radius: 0;
+  border: 0;
+  padding: 40px;
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 100%;
+}
+
+body .membership-option.selected {
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 100%;
+  box-shadow: 0 4px 12px rgba(58, 58, 58, 0.2);
+}
+
+body .membership-option.selected::after {
+  content: "\F043E";
+  font: normal normal normal 24px / 1 "Material Design Icons";
+  font-size: 24px;
+  background: none;
+  color: var(--deep-maroon);
+  right: auto;
+  left: 0;
+}
+
+body .membership-option h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+body .membership-option .price {
+  font-size: 36px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: var(--deep-maroon);
+}
+
+body .membership-option ul {
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+body .membership-option ul li {
+  position: relative;
+  padding-left: 34px;
+}
+
+body .membership-option ul li:not(:first-child) {
+  margin-top: 20px;
+}
+
+body .membership-option ul li:before {
+  content: '\F0134';
+  font-family: "Material Design Icons";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--deep-maroon);
+}
+
+body .membership-option .note {
+  font-size: 14px;
+  margin: 0;
+}
+
+body .popular-badge {
+  border-radius: 0;
+  background: var(--deep-maroon);
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0;
+  top: 0;
+  right: 0;
+}
+
+body .membership-options-grid {
+  margin-bottom: 0;
+}
+
+
+#tsn-membership-form .form-group::before {
+  font: normal normal normal 24px / 1 "Material Design Icons";
+  font-size: 24px;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+/* Icons for Form Groups */
+#tsn-membership-form .form-group-os0::before {
+  content: "\F006D";
+}
+
+/* Potential/Future fields */
+#tsn-membership-form .form-group-name::before,
+#tsn-membership-form .form-group-first_name::before,
+#tsn-membership-form .form-group-last_name::before,
+#tsn-membership-form .form-group-first-name::before,
+#tsn-membership-form .form-group-last-name::before {
+  content: "\F0B55";
+}
+
+#tsn-membership-form .form-group-email::before {
+  content: "\F05F0";
+}
+
+#tsn-membership-form .form-group-phone::before,
+#tsn-membership-form .form-group-tel::before {
+  content: "\F1182";
+}
+
+#tsn-membership-form .form-group-address:before {
+  content: "\F07D9";
+  transform: translateY(0);
+  top: 15px;
+}
+
+#tsn-membership-form .form-group-city:before {
+  content: "\F12FC";
+}
+
+#tsn-membership-form .form-group-state:before {
+  content: "\F0982";
+}
+
+#tsn-membership-form .form-group-zip_code:before {
+  content: "\F0985";
+}
+
+body .form-container .form-group {
+  margin-bottom: 20px;
+}
+
+body .form-container .form-group .form-group {
+  margin: 0;
+}
+
+.form-actions {
+  margin: 30px 0;
+}
+
+body .security-note {
+  margin-top: 40px;
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  background: #fef7ef;
+  border-left: 4px solid var(--deep-maroon);
+  padding: 20px 20px 20px 40px;
+  position: relative;
+}
+
+body .security-note img {
+  position: absolute;
+  top: 24px;
+  left: 14px;
+}
+
+body .security-note strong {
+  font-weight: 400;
+  color: var(--deep-maroon);
+}
+
+.tsn-membership-contact {
+  padding: 60px 40px;
+  position: relative;
+  background: #fef7ef;
+}
+
+.tsn-membership-contact h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--deep-maroon);
+  text-transform: uppercase;
+}
+
+.tsn-membership-contact p {
+  font-family: 'Anton', sans-serif;
+}
+
+body .tsn-membership-contact p img {
+  display: none !important;
+}
+
+body .tsn-membership-contact:before,
+body .tsn-membership-contact:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  background: url(../images/brown-line-pattern.png) 0 0 repeat-x;
+  background-size: contain;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+body .tsn-membership-contact:after {
+  top: auto;
+  bottom: 0;
+  z-index: 10;
+}

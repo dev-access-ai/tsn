@@ -1,0 +1,129 @@
+.login-section .form-container .form-group .form-control,
+.registraion-section .form-container .form-group .form-control,
+.registraion-section .form-container .form-group .form-select {
+  height: 76px;
+  background-color: transparent;
+  padding-left: 76px;
+}
+
+.login-section .form-container .form-group .mdi,
+.registraion-section .form-container .form-group .mdi {
+  left: 30px;
+}
+
+.login-section .row {
+  align-items: center;
+}
+
+.registraion-section .section-title h3 {
+  text-align: center;
+}
+
+.registraion-section .section-title h3:before,
+.registraion-section .section-title h3:after {
+  margin: 0 auto 10px;
+}
+
+.registraion-section .section-title h3:after {
+  margin: 10px auto 0;
+}
+
+.registraion-section .section-info {
+  text-align: center;
+}
+
+.registraion-section .section-info h4 {
+  font-size: 24px;
+}
+
+.registraion-section .section-info p {
+  font-size: 20px;
+  font-family: Anton, sans-serif;
+  margin: 15px 0
+}
+
+.registraion-section .top-container {
+  margin-bottom: 60px;
+}
+
+.tsn-login-container .section-title h5 {
+  margin-top: 20px;
+}
+
+.tsn-login-container p {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Anton', sans-serif;
+}
+
+.tsn-login-container .btn.btn-link {
+  font-size: 16px;
+}
+
+.form-group.form-group-otp {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.otp-sent-message #otp-email-display {
+  font-style: normal;
+}
+
+.field-hint {
+  font-family: 'Anton', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.login-section #tsn-login-messages .alert-info {
+  border-radius: 0;
+  border: 0;
+  padding: 30px;
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 100%;
+  margin: 0 0 30px;
+  font-family: 'Anton', sans-serif;
+}
+
+.login-section #tsn-login-messages .alert-info strong {
+  font-weight: 400;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+}
+
+.login-section #tsn-login-messages .alert-info strong img {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.login-section #tsn-login-messages .alert-info strong+br {
+  display: none;
+}
+
+.login-section #tsn-login-messages .alert-info strong+br+div {
+  color: var(--deep-maroon) !important;
+  margin: 0 !important;
+}
+
+label[for="otp_code"] {
+  font-family: 'Anton', sans-serif;
+  display: block;
+  margin: 20px 0;
+}
+
+.login-section #tsn-login-messages .alert.alert-error {
+  color: var(--deep-maroon);
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.login-section .image-col img {
+  width: 100%;
+  height: auto;
+}

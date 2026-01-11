@@ -1,0 +1,173 @@
+.event-detail-section {
+  background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+  background-size: cover;
+}
+
+.event-detail-section .image-container {
+  margin-bottom: 60px;
+}
+
+.event-detail-section .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.event-meta {
+  margin-bottom: 30px;
+}
+
+.event-meta h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--body-text);
+  text-transform: uppercase;
+}
+
+.event-meta h5:last-child {
+  margin-bottom: 0;
+}
+
+.event-information p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--body-text);
+}
+
+.event-information p:last-child {
+  margin-bottom: 0;
+}
+
+.event-information h4 {
+  font-size: 30px;
+  color: var(--body-text);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.event-information ul {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.event-information ul li {
+  font-size: 20px;
+  color: var(--body-text);
+  margin-bottom: 20px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.event-information ul {
+  margin: 40px 0 40px;
+}
+
+.event-information ul li:before{
+  content: '\F0995';
+  font-family: "Material Design Icons";
+  position: absolute;
+  left: 20px;
+  top: -4px;
+  font-size: 26px;
+  line-height: 1.5;
+  color: var(--deep-maroon);
+}
+
+.event-information ol {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+  counter-reset: event-counter;
+}
+
+.event-information strong {
+  font-weight: 800;
+}
+
+.event-information ol li {
+  font-size: 20px;
+  color: var(--body-text);
+  margin-bottom: 20px;
+  padding-left: 60px;
+  position: relative;
+  counter-increment: event-counter;
+}
+
+.event-information ol li:before {
+  content: counter(event-counter) ")";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--deep-maroon);
+  font-weight: bold;
+}
+
+.event-detail-section .content-col .socials {
+  margin-top: 30px;
+}
+
+.event-detail-section .side-col {
+  padding-left: 60px;
+}
+
+.event-detail-section .side-col .col-container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  list-style: none;
+}
+
+.event-detail-section .side-col .col-container li h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgba(74, 74, 74, 0.7);
+}
+
+.event-detail-section .side-col .col-container li h6 {
+  font-size: 20px;
+  color: var(--body-text);
+  text-transform: uppercase;
+}
+
+.event-detail-section .side-col .col-container {
+  border:  1px solid var(--deep-maroon);
+  padding: 80px 40px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.event-detail-section .side-col .col-container:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  background: url(../images/brown-line-pattern.png) 0 0 repeat-x;
+  background-size: contain;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.event-detail-section .side-col .col-container:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  background: url(../images/brown-line-pattern.png) 0 0 repeat-x;
+  background-size: contain;
+  left: 0;
+  bottom: -2px;
+  z-index: 10;
+}
+
+.event-detail-section .socials ul {
+  justify-content: flex-start;
+  
+  margin: 0;
+}

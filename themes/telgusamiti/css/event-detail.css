@@ -1,0 +1,389 @@
+body .tsn-event-detail-container.event-detail-section {
+  background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+  background-size: cover;
+  max-width: 100%;
+  padding: 60px 0 !important;
+}
+
+.event-header .section-title {
+  display: none;
+}
+
+#inner-banner .section-title {
+  max-width: 768px;
+  margin: 0 auto 20px;
+}
+
+.event-detail-section .image-container {
+  margin-bottom: 60px;
+}
+
+.event-detail-section .image-container img {
+  width: 100%;
+  height: auto;
+  /*border: 10px solid #4B0205;
+  border-radius: 10%;*/
+}
+
+.event-meta {
+  margin-bottom: 30px;
+}
+
+.event-meta h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--body-text);
+  text-transform: uppercase;
+}
+
+.event-meta h5:last-child {
+  margin-bottom: 0;
+}
+
+body .event-meta-bar {
+  border: 0;
+  display: block;
+}
+
+.event-information p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--body-text);
+}
+
+.event-information p:last-child {
+  margin-bottom: 0;
+}
+
+.event-information  img {
+  width: 100%;
+  height: auto;
+}
+
+.event-information h4,
+.event-information h2,
+.event-venue h2 {
+  font-size: 30px;
+  color: var(--body-text);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.event-information ul {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.event-information ul li {
+  font-size: 20px;
+  color: var(--body-text);
+  margin-bottom: 20px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.event-information ul li:before{
+  content: '\F0995';
+  font-family: "Material Design Icons";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--deep-maroon);
+}
+
+.event-information ol {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+  counter-reset: event-counter;
+}
+
+.event-information strong {
+  font-weight: 800;
+}
+
+.event-information ol li {
+  font-size: 20px;
+  color: var(--body-text);
+  margin-bottom: 20px;
+  padding-left: 60px;
+  position: relative;
+  counter-increment: event-counter;
+}
+
+.event-information ol li:before {
+  content: counter(event-counter) ")";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--deep-maroon);
+  font-weight: bold;
+}
+
+.event-detail-section .side-col {
+  padding-left: 60px;
+}
+
+.event-detail-section .side-col .col-container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  list-style: none;
+}
+
+.event-detail-section .side-col .col-container li h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgba(74, 74, 74, 0.7);
+}
+
+.event-detail-section .side-col .col-container li h6 {
+  font-size: 20px;
+  color: var(--body-text);
+  text-transform: uppercase;
+}
+
+.event-detail-section .side-col .col-container {
+  border:  1px solid var(--deep-maroon);
+  padding: 70px 30px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border-radius: 0;
+  position: relative;
+}
+
+.event-detail-section .side-col .col-container:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  background: url(../images/brown-line-pattern.png) 0 0 repeat-x;
+  background-size: contain;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.event-detail-section .side-col .col-container:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 44px;
+  background: url(../images/brown-line-pattern.png) 0 0 repeat-x;
+  background-size: contain;
+  left: 0;
+  bottom: -2px;
+  z-index: 10;
+}
+
+.event-detail-section .socials ul {
+  justify-content: flex-start;
+  
+  margin: 0;
+}
+
+body .ticket-booking-section h3 {
+  font-size: 20px;
+  color: var(--body-text);
+}
+
+body .ticket-type-card {
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'Anton', sans-serif;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--deep-maroon);
+}
+
+body .price {
+  font-weight: normal;
+  color: var(--deep-maroon);
+}
+
+body .availability {
+  color: var(--orange);
+}
+
+body .form-container .form-group {
+  margin-bottom: 20px;
+}
+
+body .form-container .form-group .form-control,
+body .form-container .form-group .form-select {
+  padding-left: 20px;
+  background-color: transparent;
+  height: 48px;
+  font-size: 16px;
+}
+
+body .form-container .form-group textarea.form-control {
+  padding-left: 20px;
+  background-color: transparent;
+  height: 100px;
+  font-size: 16px;
+}
+
+body .member-toggle,
+body .cart-summary {
+  padding: 15px 20px 20px;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  background-color: #f7e8d4;
+}
+
+body .cart-summary,
+body .summary-row {
+  font-family: 'Anton', sans-serif;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+body .summary-row.total {
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 0;
+  font-weight: 400;
+  color: var(--deep-maroon);
+}
+
+body .quantity-selector button {
+  width: 32px;
+  height: 32px;
+  background-color: var(--deep-maroon);
+  color: var(--white);
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+body .ticket-quantity {
+  height: 32px;
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+body .member-toggle label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  font-size: 16px;
+  color: var(--body-text);
+  user-select: none;
+  transition: color 0.3s ease;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-family: 'Anton', sans-serif;
+}
+
+body .member-toggle label:hover {
+  color: var(--deep-maroon);
+}
+
+body .member-toggle label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+/* Custom radio button outer circle */
+body .member-toggle label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid var(--deep-maroon);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Radio button inner circle (when checked) */
+body .member-toggle label::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 9px;
+  background-color: var(--deep-maroon);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+/* Show inner circle when checked - using :has() for modern browsers */
+body .member-toggle label:has(input[type="radio"]:checked)::after {
+  opacity: 1;
+}
+
+/* Fallback for older browsers - when input is sibling of label */
+body .member-toggle input[type="radio"]:checked + label::after {
+  opacity: 1;
+}
+
+/* Enhanced hover effect */
+body .member-toggle label:hover::before {
+  border-color: var(--deep-maroon);
+  box-shadow: 0 0 0 3px rgba(139, 30, 63, 0.1);
+}
+
+/* Focus state for accessibility */
+body .member-toggle label input[type="radio"]:focus-visible {
+  outline: none;
+}
+
+body .member-toggle label:has(input[type="radio"]:focus-visible)::before {
+  outline: 2px solid var(--deep-maroon);
+  outline-offset: 2px;
+}
+
+/* Active/checked state styling for label text */
+body .member-toggle label:has(input[type="radio"]:checked) {
+  color: var(--deep-maroon);
+  font-weight: 500;
+}
+
+body .ticket-qty-row {
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+body .ticket-name {
+  font-weight: 400;
+}
+
+body .current-price {
+  color: var(--deep-maroon);
+  font-weight: 400;
+}

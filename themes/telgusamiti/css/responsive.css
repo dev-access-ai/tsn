@@ -1,0 +1,410 @@
+/**
+ * Responsive Styles
+ * Media queries for responsive design across different screen sizes
+ */
+
+@media only screen and (max-width: 1400px) {
+  .top-footer h3 {
+    padding-right: 0;
+    font-size: 40px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .our-community-section {
+    padding: 94px 0 60px;
+  }
+
+  .our-community-section::before,
+  .top-footer::before {
+    height: 36px;
+  }
+
+  .what-we-do-section::before,
+  .what-we-do-section::after {
+    background-size: 32px auto;
+  }
+
+  .what-we-do-section::after {
+    height: 40px;
+  }
+
+  .section-title h3 {
+    font-size: 40px;
+  }
+
+  .our-journey-section .four-grid-section .col-container::before,
+  .our-journey-section .four-grid-section .col-container::after {
+    height: 94px;
+    background-size: auto 100%;
+  }
+
+  .our-journey-section .four-grid-section .col-container h4 {
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .what-we-do-section {
+    padding: 80px 0;
+  }
+
+  #main-banner .banner-content h4,
+  #main-banner .banner-content h1,
+  #main-banner .banner-content h5 {
+    font-size: 24px;
+  }
+
+  #main-banner .banner-content h1 {
+    font-size: 48px;
+  }
+
+  .event-detail-section .side-col .col-container {
+    padding: 60px 20px;
+  }
+
+  .newsletter-section .title-col,
+  .newsletter-section .form-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .newsletter-section .form-container .btn.btn-warning {
+    height: auto;
+  }
+
+  .newsletter-section h3 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .event-detail-section .side-col {
+    padding-left: 30px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .what-we-do-section {
+    padding: 80px 0;
+  }
+
+  .our-community-section {
+    padding: 94px 0 60px;
+  }
+
+  .top-footer h3 {
+    font-size: 32px;
+  }
+
+  .top-footer {
+    padding: 100px 0;
+    min-height: inherit;
+  }
+
+  .section-title h3 {
+    font-size: 36px;
+  }
+
+  .our-community-section .swiper {
+    max-width: 100%;
+  }
+
+  .welcome-section .content-col p {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .welcome-section .content-col,
+  .infomation-section .content-col {
+    padding-left: 30px;
+  }
+
+  .events-section .content-col h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .events-section .event-info {
+    margin: 20px 0;
+  }
+
+  .what-we-do-section .section-grid .grid-info h4 {
+    font-size: 24px;
+  }
+
+  .btn.btn-primary,
+  .btn.btn-secondary,
+  .btn.btn-info,
+  .btn.btn-warning {
+    font-size: 20px;
+  }
+
+  #main-banner .buttons {
+    gap: 15px;
+  }
+
+
+  #main-banner .banner-content h1,
+  .newsletter-section h3 {
+    font-size: 32px;
+  }
+
+  .infomation-section .content-col h4 {
+    font-size: 22px;
+  }
+
+  #main-banner .banner-content h4,
+  #main-banner .banner-content h5 {
+    font-size: 20px;
+  }
+
+  .middle-footer h4 {
+    font-size: 28px;
+  }
+
+  .middle-footer .about-col,
+  .middle-footer .quick-col,
+  .middle-footer .get-touch-col {
+    flex: 0 0 33.33333333333333%;
+    max-width: 33.33333333333333%;
+  }
+
+  .logo-container {
+    overflow: hidden;
+  }
+
+  .logo-container #logo-footer::after {
+    width: 224px;
+  }
+
+  .logo-container #logo-footer::before {
+    width: 224px;
+    left: -224px;
+  }
+
+  .form-container .form-group .form-control, .form-container .form-group .form-select {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .section-title h3 {
+    font-size: 32px;
+  }
+
+  .event-information h4 {
+    font-size: 24px;
+  }
+
+  .event-information ol li::before {
+    font-size: 20px;
+  }
+
+  .event-information ol li {
+    font-size: 18px;
+  }
+
+  .our-community-section .section-shape {
+    width: 50%;
+    height: 40%;
+    background-size: cover;
+  }
+
+  .what-we-do-section .section-grid .grid-info h4 {
+    font-size: 22px;
+    line-height: 1.35;
+  }
+
+  .our-journey-section .four-grid-section .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 400px;
+    margin-bottom: 30px;
+  }
+
+  .events-section .content-col {
+    padding-left: 15px;
+  }
+
+  .our-journey-section .four-grid-section .col:nth-child(2) .flower {
+    display: none;
+  }
+
+  .btn.btn-primary,
+  .btn.btn-secondary,
+  .btn.btn-info,
+  .btn.btn-warning {
+    font-size: 18px;
+  }
+
+  .infomation-section .image-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .infomation-section .image-col img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .infomation-section .content-col {
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-section .title-col,
+  .newsletter-section .form-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-section {
+    padding: 40px 0 80px;
+  }
+
+  .newsletter-section .row {
+    padding-top: 30px;
+  }
+
+  .newsletter-section .bg::before {
+    background-size: cover;
+  }
+
+  .newsletter-section h3 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .middle-footer .about-col,
+  .middle-footer .quick-col,
+  .middle-footer .get-touch-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .middle-footer .quick-col,
+  .middle-footer .get-touch-col {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+
+  #footer-menu li {
+    flex: 0 0 auto;
+    max-width: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .what-we-do-section .section-grid .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px !important;
+  }
+
+  .what-we-do-section .section-info {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-footer h3 {
+    text-align: center;
+  }
+
+  .event-detail-section .side-col {
+    padding-left: 15px;
+    margin-top: 30px;
+  }
+
+  .top-footer::after {
+    background-size: auto 110px;
+  }
+
+  .welcome-section .content-col {
+    padding-left: 15px;
+  }
+
+  .our-journey-section .two-grid-section .content-col {
+    padding-left: 15px;
+    margin-top: 30px;
+  }
+
+  .events-section .content-col {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .our-journey-section .four-grid-section .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .our-journey-section::before {
+    width: 100%;
+    height: 300px;
+  }
+
+  .our-journey-section .four-grid-section .col:last-child {
+    margin-bottom: 0;
+  }
+
+  .our-journey-section .four-grid-section .flower {
+    top: 100%;
+    transform: translateY(0);
+    left: 50%;
+    margin-left: -24px;
+  }
+
+  .our-journey-section .four-grid-section .col:nth-child(2) .flower {
+    display: block;
+  }
+
+  .what-we-do-section .section-grid .col-container {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .what-we-do-section .section-grid .grid-icon {
+    margin: 0 auto 20px;
+  }
+
+  .what-we-do-section .section-grid .grid-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  .newsletter-section .form-container {
+    flex-wrap: wrap;
+  }
+
+  .newsletter-section .form-container .form-control {
+    height: 50px;
+  }
+
+  .newsletter-section .form-container .form-control,
+  .newsletter-section .form-container .btn.btn-warning {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

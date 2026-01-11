@@ -1,0 +1,185 @@
+.get-in-touch-section {
+  background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+  background-size: cover;
+}
+
+.get-in-touch-section .three-grid-section {
+  padding: 0 100px;
+}
+
+
+.get-in-touch-section .three-grid-section .col-container {
+  padding: 100px 0;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.get-in-touch-section .three-grid-section .flower {
+  position: absolute;
+  width: 48px;
+  height: 100px;
+  background: url(../images/flower-shape.svg) 50% 50% no-repeat;
+  background-size: cover;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.get-in-touch-section .three-grid-section .col-container:before {
+  content: "";
+  width: 100%;
+  height: 152px;
+  background: url(../images/curve-shape-top.svg) 50% 50% no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.get-in-touch-section .three-grid-section .col-container:after {
+  content: "";
+  width: 100%;
+  height: 152px;
+  background: url(../images/curve-shape-bottom.svg) 50% 50% no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.get-in-touch-section .three-grid-section .col-container h4,
+.get-in-touch-section .three-grid-section .col-container .section-info {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.get-in-touch-section .three-grid-section .col-container h4 {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--body-text);
+}
+
+.get-in-touch-section .three-grid-section .col-container .section-info {
+  height: 90px;
+  font-size: 20px;
+  font-family: Anton, sans-serif;
+  padding: 0 40px
+}
+
+.get-in-touch-section .three-grid-section .col-container .icon {
+  flex: 0 0 135px;
+  max-width: 135px;
+  height: 141px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/icon-base-curve-dark.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.contact-form-section {
+  padding: 80px 60px;
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 100%;
+  margin-top: 60px;
+}
+
+.contact-form-section .section-title h3,
+.contact-form-section .section-title h4 {
+  text-align: center;
+}
+
+.contact-form-section .section-title h4 {
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.contact-form-section .section-title h3:before,
+.contact-form-section .section-title h3:after {
+  margin: 0 auto
+}
+
+@media only screen and (max-width: 1400px) {
+  .contact-form-section {
+    padding: 40px;
+    margin-top: 40px;
+  }
+
+  .get-in-touch-section .three-grid-section {
+    padding: 0;
+  }
+
+  .get-in-touch-section .three-grid-section .col-container .icon {
+    flex: 0 0 100px;
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .get-in-touch-section .three-grid-section .col-container .icon img {
+    width: 28px;
+  }
+
+  .get-in-touch-section .three-grid-section .col-container h4 {
+    font-size: 22px;
+  }
+
+  .get-in-touch-section .three-grid-section .col-container .section-info {
+    font-size: 18px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .contact-form-section {
+    padding: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 1023px) {
+  .get-in-touch-section .three-grid-section .row {
+    justify-content: center;
+  }
+  .get-in-touch-section .three-grid-section .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .get-in-touch-section .three-grid-section .col:nth-child(2) .flower {
+    left: 0;
+    top: 100%;
+    transform: none;
+    margin-top: -70px;
+    margin-left: -37px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .get-in-touch-section .three-grid-section .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .get-in-touch-section .three-grid-section .col:last-child {
+    margin-bottom: 0;
+  }
+
+  .get-in-touch-section .three-grid-section .flower,
+  .get-in-touch-section .three-grid-section .col:nth-child(2) .flower {
+    top: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
