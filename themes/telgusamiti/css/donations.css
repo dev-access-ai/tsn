@@ -1,0 +1,82 @@
+.full-view-content {
+  background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
+  background-size: cover;
+  max-width: 100%;
+  padding: 60px 0 !important;
+}
+
+body .donation-form-container {
+  padding: 40px;
+  background: url(../images/curve-abstract-bg.jpg) 50% 0 no-repeat #FFFBF8;
+  background-size: auto 360px;
+  margin-top: 60px;
+  border-radius: 0;
+  border: 0;
+}
+
+body .donations-header {
+  margin-bottom: 40px;
+}
+
+body .donations-header .section-title h3:before,
+body .donations-header .section-title h3:after {
+  margin: 0 auto 10px;
+}
+
+body .donations-header .section-title h3:after {
+  margin: 10px auto 30px;
+}
+
+body .donations-header .section-title h3 {
+  text-align: center;
+}
+
+body .donations-header .section-title p {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Anton', sans-serif;
+}
+
+body .donation-form-container .section-title h3:before,
+body .donation-form-container .section-title h3:after {
+  margin: 0 auto 10px;
+}
+
+body .donation-form-container .section-title h3:after {
+  margin: 10px auto 0;
+}
+
+body .donation-form-container .section-title h3 {
+  text-align: center;
+}
+
+body .form-container .form-group {
+  margin-bottom: 20px;
+}
+
+body .form-container .form-group .form-control,
+body .form-container .form-group .form-select {
+  padding-left: 20px;
+  background-color: transparent;
+  height: 48px;
+  font-size: 16px;
+}
+
+body .form-container .form-group textarea.form-control {
+  padding-left: 20px;
+  background-color: transparent;
+  height: 100px;
+  font-size: 16px;
+}
+
+body .donation-amount-group .button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+body .amount-buttons.button-group .amount-btn {
+  flex: 1;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+}

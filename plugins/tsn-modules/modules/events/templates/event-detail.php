@@ -295,19 +295,23 @@ if ($is_member_logged_in && $logged_in_member) {
                             </div>
                         </div>
 
-                        <div class="buyer-info" style="display: none;">
+                        <div class="buyer-info form-container" style="display: none;">
                             <h4>Your Information</h4>
-                            <input type="text" name="buyer_name" placeholder="Full Name *" required 
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="buyer_name" placeholder="Full Name *" required 
                                 value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->first_name . ' ' . $logged_in_member->last_name) : ''; ?>" 
                                 <?php echo $is_member_logged_in ? 'readonly style="background-color: #f8f9fa; cursor: not-allowed;"' : ''; ?>>
-                            
-                            <input type="email" name="buyer_email" placeholder="Email Address *" required 
-                                value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->email) : ''; ?>" 
-                                <?php echo $is_member_logged_in ? 'readonly style="background-color: #f8f9fa; cursor: not-allowed;"' : ''; ?>>
-                            
-                            <input type="tel" name="buyer_phone" placeholder="Phone Number" 
-                                value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->phone) : ''; ?>" 
-                                <?php echo $is_member_logged_in ? 'readonly style="background-color: #f8f9fa; cursor: not-allowed;"' : ''; ?>>
+                            </div>
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="buyer_email" placeholder="Email Address *" required 
+                                  value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->email) : ''; ?>" 
+                                  <?php echo $is_member_logged_in ? 'readonly style="background-color: #f8f9fa; cursor: not-allowed;"' : ''; ?>>
+                            </div>
+                            <div class="form-group">
+                              <input type="tel" class="form-control" name="buyer_phone" placeholder="Phone Number" 
+                                  value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->phone) : ''; ?>" 
+                                  <?php echo $is_member_logged_in ? 'readonly style="background-color: #f8f9fa; cursor: not-allowed;"' : ''; ?>>
+                            </div>                            
                         </div>
                         
                         <div class="attendee-details" style="display: none;">
@@ -375,7 +379,7 @@ if ($is_member_logged_in && $logged_in_member) {
                 <?php if ($event->enable_volunteering): ?>
                 <div class="volunteer-section" id="volunteer">
                     <div class="ticket-booking-section col-container">
-                        <h3>🤝 Register as Volunteer</h3>
+                        <h3>Register as Volunteer</h3>
                         <p>We need enthusiastic volunteers to help make this event a success!</p>
                         
                         <form id="volunteer-form" class="ticket-booking-form form-container">
@@ -423,11 +427,11 @@ if ($is_member_logged_in && $logged_in_member) {
 
                 <?php if ($event->enable_donations): ?>
                 <div class="donation-section" id="donate" style="margin-top: 30px;">
-                    <div class="ticket-booking-section" style="border-color: #28a745;">
-                        <h3 style="color: #28a745;">❤️ Donate to Event</h3>
+                    <div class="ticket-booking-section col-container">
+                        <h3>Donate to Event</h3>
                         <p>Support this event with a donation. Every contribution helps!</p>
                         
-                        <form id="event-donation-form" class="ticket-booking-form">
+                        <form id="event-donation-form" class="ticket-booking-form form-container">
                             <input type="hidden" name="action" value="tsn_submit_donation">
                             <input type="hidden" name="event_id" value="<?php echo $event->id; ?>">
                             <?php wp_nonce_field('tsn_donation_nonce', 'nonce'); ?>
@@ -436,22 +440,30 @@ if ($is_member_logged_in && $logged_in_member) {
                             <input type="hidden" name="message" value="Donation for Event: <?php echo esc_attr($event->title); ?>">
                             
                             <div class="donation-amount-group" style="margin-bottom: 15px;">
-                                <label style="font-weight: 600; display: block; margin-bottom: 5px;">Amount ($)</label>
-                                <div style="display: flex; gap: 10px;">
-                                    <button type="button" class="amount-btn" data-value="25" style="padding: 8px 15px; border: 1px solid #ddd; background: #fff; cursor: pointer;">$25</button>
-                                    <button type="button" class="amount-btn" data-value="50" style="padding: 8px 15px; border: 1px solid #ddd; background: #fff; cursor: pointer;">$50</button>
-                                    <button type="button" class="amount-btn" data-value="100" style="padding: 8px 15px; border: 1px solid #ddd; background: #fff; cursor: pointer;">$100</button>
-                                    <input type="number" name="amount" placeholder="Custom" style="width: 80px; padding: 8px; border: 1px solid #ddd;">
+                                <label class="form-label">Amount ($)</label>
+                                <div class="button-group">
+                                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-value="25">$25</button>
+                                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-value="50">$50</button>
+                                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-value="100">$100</button>
+                                </div>
+                                <div class="form-group">
+                                  <input type="number" class="form-control"name="amount" placeholder="Custom">
                                 </div>
                             </div>
 
                             <div class="buyer-info" style="display: block;">
-                                <input type="text" name="donor_name" placeholder="Full Name *" required value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->first_name . ' ' . $logged_in_member->last_name) : ''; ?>">
-                                <input type="email" name="donor_email" placeholder="Email Address *" required value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->email) : ''; ?>">
-                                <input type="tel" name="donor_phone" placeholder="Phone Number" value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->phone) : ''; ?>">
+                              <div class="form-group">
+                                <input type="text" name="donor_name" class="form-control" placeholder="Full Name *" required value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->first_name . ' ' . $logged_in_member->last_name) : ''; ?>">
+                              </div>
+                              <div class="form-group">
+                                <input type="email" name="donor_email" class="form-control"placeholder="Email Address *" required value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->email) : ''; ?>">
+                              </div>
+                              <div class="form-group">
+                                <input type="tel" name="donor_phone" class="form-control" placeholder="Phone Number" value="<?php echo $is_member_logged_in ? esc_attr($logged_in_member->phone) : ''; ?>">
+                              </div>
                             </div>
                             
-                            <button type="submit" class="btn-checkout" style="background: #28a745;">Donate Now</button>
+                            <button type="submit" class="btn-checkout btn btn-primary"><span>Donate Now</span></button>
                             <div class="donation-message" style="margin-top: 15px; display: none;"></div>
                         </form>
                     </div>
@@ -1089,7 +1101,7 @@ jQuery(document).ready(function($) {
             for (let ticketNum = 0; ticketNum < qty; ticketNum++) {
                 // Generate attendee forms based on how many people this ticket covers
                 for (let attendeeNum = 0; attendeeNum < attendeesPerTicket; attendeeNum++) {
-                    const formCard = $('<div class="attendee-form-card"></div>');
+                    const formCard = $('<div class="attendee-form-card form-container"></div>');
                     
                     // Label shows ticket type and attendee number within that ticket
                     let label = ticketName;
@@ -1101,16 +1113,22 @@ jQuery(document).ready(function($) {
                     }
                     
                     formCard.html(`
-                        <span class="ticket-label">${label}</span>
+                        <label class="ticket-label form-label">${label}</label>
                         <div class="form-row">
-                            <input type="text" name="attendees[${attendeeIndex}][name]" placeholder="Full Name *" required>
-                            <input type="number" name="attendees[${attendeeIndex}][age]" placeholder="Age" min="1" max="120">
-                            <select name="attendees[${attendeeIndex}][gender]">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="attendees[${attendeeIndex}][name]" placeholder="Full Name *" required>
+                            </div>
+                            <div class="form-group">
+                              <input type="number" class="form-control" name="attendees[${attendeeIndex}][age]" placeholder="Age" min="1" max="120">
+                            </div>
+                            <div class="form-group">
+                              <select class="form-select" name="attendees[${attendeeIndex}][gender]">
                                 <option value="">Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
-                            </select>
+                              </select>
+                            </div>
                         </div>
                     `);
                     

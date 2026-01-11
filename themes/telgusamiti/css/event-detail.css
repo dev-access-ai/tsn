@@ -193,7 +193,8 @@ body .event-meta-bar {
 }
 
 body .ticket-booking-section h3 {
-  font-size: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
   color: var(--body-text);
 }
 
@@ -236,12 +237,41 @@ body .form-container .form-group textarea.form-control {
 }
 
 body .member-toggle,
-body .cart-summary {
+body .cart-summary,
+body .attendee-details {
   padding: 15px 20px 20px;
   display: flex;
   gap: 0;
   flex-wrap: wrap;
   background-color: #f7e8d4;
+}
+
+body .attendee-details {
+  border: 0 !important;
+  border-radius: 4px !important;
+}
+
+body .attendee-form-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+body .attendee-details h4 {
+  font-size: 24px;
+  color: var(--body-text);
+}
+
+body .attendee-form-card .form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body .attendee-form-card .form-group {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 10px !important;
 }
 
 body .cart-summary,
@@ -386,4 +416,52 @@ body .ticket-name {
 body .current-price {
   color: var(--deep-maroon);
   font-weight: 400;
+}
+
+body .member-validation-message {
+  margin-top: 40px;
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 0;
+  background: #fef7ef;
+  color: var(--body-text);
+  border: 0;
+  border-left: 4px solid var(--deep-maroon);
+  padding: 20px 20px 20px 40px;
+  position: relative;
+}
+
+body .member-validation-message strong {
+  color: var(--body-text);
+}
+
+body .member-validation-message img {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+}
+
+body .member-validation-message p {
+  color: var(--body-text);
+  margin: 0;
+}
+
+body .member-validation-message strong {
+  font-weight: 400;
+}
+
+body .member-validation-message a {
+  color: var(--deep-maroon);
+  font-weight: 400;
+}
+
+body .donation-amount-group .button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+body .donation-amount-group .button-group .amount-btn {
+  flex: 1;
 }

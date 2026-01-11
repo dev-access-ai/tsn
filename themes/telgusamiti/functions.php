@@ -128,6 +128,11 @@ function telugusmiti_scripts()
     wp_enqueue_style('tsn-member-dashboard-style', get_template_directory_uri() . '/css/member-dashboard.css', array('telugusmiti-custom-style'), '1.0.0');
   }
 
+  // Enqueue Donations Page CSS (only on donations page)
+  if (is_page('donations') || is_page('donate') || (isset($_SERVER['REQUEST_URI']) && (strpos($_SERVER['REQUEST_URI'], '/donations') !== false || strpos($_SERVER['REQUEST_URI'], '/donate') !== false))) {
+    wp_enqueue_style('tsn-donations-style', get_template_directory_uri() . '/css/donations.css', array('telugusmiti-custom-style'), '1.0.0');
+  }
+
   // Enqueue Events Page CSS (only on main /events listing page, not event detail pages)
   $event_slug = get_query_var('event_slug');
   // Only load events.css if we're on the events page AND there's no event slug (not a detail page)

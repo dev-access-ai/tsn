@@ -113,24 +113,24 @@ body .events-grid {
 .event-image-wrapper .event-featured-image,
 .event-image-wrapper .event-image-placeholder {
   position: absolute;
-  top: 50px;
+  top: 9.6%; /* Responsive: 50px / 520px ≈ 9.6% */
   z-index: 10;
-  left: 50px;
-  width: 100%;
-  height: 100%;
-  clip-path: url(../images/event-curve-clip.svg#innerClip);
-  -webkit-clip-path: url(../images/event-curve-clip.svg#innerClip);
+  left: 9.6%; /* Responsive: 50px / 520px ≈ 9.6% */
+  width: calc(100% - 19.2%); /* 100% - (9.6% * 2) */
+  height: calc(100% - 19.2%); /* 100% - (9.6% * 2) */
+  clip-path: url(#innerClip);
+  -webkit-clip-path: url(#innerClip);
 }
 
 
 .event-image-wrapper::before {
   content: "";
   position: absolute;
-  top: 50px;
+  top: 9.6%; /* Responsive: 50px / 520px ≈ 9.6% */
   z-index: 15;
-  left: 50px;
-  width: 420px;
-  height: 420px;
+  left: 9.6%; /* Responsive: 50px / 520px ≈ 9.6% */
+  width: 80.8%; /* Responsive: 420px / 520px ≈ 80.8% */
+  height: 80.8%;
   background: url(../images/event-curve-border.svg) 50% 50% no-repeat;
   background-size: cover;
 }
@@ -140,8 +140,8 @@ body .events-grid {
   position: absolute;
   top: 0;
   left: 0;
-  width: 520px;
-  height: 520px;
+  width: 100%;
+  height: 100%;
   background: url(../images/white-event-curve.svg) 50% 50% no-repeat;
   background-size: cover;
 }
@@ -155,3 +155,57 @@ body .events-grid {
 .event-image-wrapper .event-image-placeholder {
   background-color: var(--base-background);
 } 
+
+/* Tablet and smaller desktop */
+@media only screen and (max-width: 1400px) {
+  .event-image-col {
+    flex: 0 0 480px;
+    max-width: 480px;
+  }
+
+  .event-content-col {
+    flex: 0 0 calc(100% - 520px);
+    max-width: calc(100% - 520px);
+    margin-left: auto;
+  }
+}
+
+/* Tablet and smaller desktop */
+@media only screen and (max-width: 1023px) {
+  .events-listing-section {
+    padding: 60px 0;
+  }
+
+  .event-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .event-image-col {
+    flex: 0 0 360px;
+    max-width: 360px;
+  }
+
+  .event-content-col {
+    flex: 0 0 calc(100% - 400px);
+    max-width: calc(100% - 400px);
+    margin-left: auto;
+  }
+
+  .event-meta p {
+    font-size: 14px;
+  }
+
+  .event-description {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .event-content-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

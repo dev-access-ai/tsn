@@ -109,17 +109,17 @@
 .newsletter-section .form-container {
   border: 2px solid var(--base-background);
   display: flex;
+  position: relative;
   align-items: center;
   padding: 10px;
 }
 
 .newsletter-section .form-container .form-control {
-  height: 100%;
   border: 0;
   background-color: transparent;
   box-shadow: none;
-  flex: 0 0 calc(100% - 178px);
-  max-width: calc(100% - 178px);
+  flex: 0 0 calc(100% - 188px);
+  max-width: calc(100% - 188px);
   font-size: 20px;
   color: var(--base-background);
 }
@@ -132,6 +132,26 @@
   flex: 0 0 178px;
   max-width: 178px;
   border-radius: 0;
+}
+
+body #tsn-newsletter-msg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: var(--base-background) !important;
+  font-weight: bold;
+  padding: 10px;
+  background: var(--yellow);
+  font-family: 'Anton', sans-serif !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+#tsn-newsletter-form {
+  flex-wrap: wrap;
 }
 
 .middle-footer {

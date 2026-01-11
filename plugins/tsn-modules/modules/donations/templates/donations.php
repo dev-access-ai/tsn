@@ -10,8 +10,10 @@ $causes = TSN_Donations::get_active_causes();
 
 <div class="tsn-donations-page">
     <div class="donations-header">
-        <h1>Support Our Mission</h1>
-        <p>Your generous donation helps us serve the Telugu community. Every contribution makes a difference.</p>
+        <div class="section-title">
+            <h3>Support Our Mission</h3>
+            <p>Your generous donation helps us serve the Telugu community. Every contribution makes a difference.</p>
+        </div>
     </div>
 
     <?php if ($causes): ?>
@@ -38,13 +40,15 @@ $causes = TSN_Donations::get_active_causes();
     <?php endif; ?>
 
     <div class="donation-form-container">
-        <h2>Make a Donation</h2>
+        <div class="section-title">
+            <h3>Make a Donation</h3>
+        </div>
         
-        <form id="donation-form">
+        <form id="donation-form" class="form-container">
             <?php if ($causes): ?>
                 <div class="form-group">
-                    <label>Select Cause <span class="optional">(Optional)</span></label>
-                    <select name="cause_id">
+                    <label class="form-label">Select Cause <span class="optional">(Optional)</span></label>
+                    <select name="cause_id" class="form-select">
                         <option value="">General Fund</option>
                         <?php foreach ($causes as $cause): ?>
                             <option value="<?php echo $cause->id; ?>"><?php echo esc_html($cause->title); ?></option>
@@ -54,35 +58,31 @@ $causes = TSN_Donations::get_active_causes();
             <?php endif; ?>
 
             <div class="form-group">
-                <label>Donation Amount *</label>
-                <div class="amount-buttons">
-                    <button type="button" class="amount-btn" data-amount="25">$25</button>
-                    <button type="button" class="amount-btn" data-amount="50">$50</button>
-                    <button type="button" class="amount-btn" data-amount="100">$100</button>
-                    <button type="button" class="amount-btn" data-amount="250">$250</button>
-                    <button type="button" class="amount-btn active" data-amount="custom">Custom</button>
+                <label class="form-label">Donation Amount *</label>
+                <div class="amount-buttons button-group">
+                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-amount="25">$25</button>
+                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-amount="50">$50</button>
+                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-amount="100">$100</button>
+                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm" data-amount="250">$250</button>
+                    <button type="button" class="amount-btn btn btn-outline-primary btn-sm active" data-amount="custom">Custom</button>
                 </div>
-                <input type="number" name="amount" id="donation-amount" placeholder="Enter amount" min="5" step="0.01" required>
+                <input type="number" name="amount" id="donation-amount" class="form-control" placeholder="Enter amount" min="5" step="0.01" required>
             </div>
 
             <div class="form-group">
-                <label for="donor_name">Full Name *</label>
-                <input type="text" name="donor_name" id="donor_name" required>
+                <input type="text" name="donor_name" id="donor_name" required class="form-control" placeholder="Full Name *">
             </div>
 
             <div class="form-group">
-                <label for="donor_email">Email Address *</label>
-                <input type="email" name="donor_email" id="donor_email" required>
+                <input type="email" name="donor_email" id="donor_email" class="form-control" placeholder="Email Address *" required>
             </div>
 
             <div class="form-group">
-                <label for="donor_phone">Phone Number</label>
-                <input type="tel" name="donor_phone" id="donor_phone">
+                <input type="tel" name="donor_phone" id="donor_phone" class="form-control" placeholder="Phone Number">
             </div>
 
             <div class="form-group">
-                <label for="message">Message <span class="optional">(Optional)</span></label>
-                <textarea name="message" id="message" rows="3" placeholder="Your message or dedication"></textarea>
+                <textarea name="message" id="message" rows="3" class="form-control" placeholder="Your message or dedication"></textarea>
             </div>
 
             <div class="form-group">
@@ -94,7 +94,7 @@ $causes = TSN_Donations::get_active_causes();
 
             <div class="donation-message"></div>
 
-            <button type="submit" class="btn-donate">Donate Now</button>
+            <button type="submit" class="btn-donate btn btn-primary btn-sm"><span>Donate Now</span></button>
         </form>
     </div>
 </div>
@@ -245,14 +245,10 @@ $causes = TSN_Donations::get_active_causes();
     border: none;
     border-radius: 4px;
     font-size: 18px;
-    font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-.btn-donate:hover {
-    background: #218838;
-}
 
 .btn-donate:disabled {
     background: #ccc;
