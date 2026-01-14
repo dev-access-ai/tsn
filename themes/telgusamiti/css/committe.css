@@ -1,3 +1,90 @@
+/* Committee Tabs Styling */
+#committeeTabs {
+  border-bottom: 0;
+  margin-bottom: 40px;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+#committeeTabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: var(--yellow);
+  z-index: 1;
+}
+
+#committeeTabs::before {
+  content: "";
+  width: 84px;
+  height: 28px;
+  background: url(../images/dots.svg) 0 0 no-repeat;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background-size: 84px auto;
+  margin-left: -42px;
+  top: auto;
+  margin-top: 0;
+  bottom: -8px;
+  z-index: 2;
+}
+
+#committeeTabs .nav-item {
+  margin: 0 10px;
+}
+
+#committeeTabs .nav-link {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--deep-maroon);
+  border: 2px solid var(--deep-maroon);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#committeeTabs .nav-link:hover {
+  background: var(--deep-maroon);
+  color: var(--white);
+  border-color: var(--deep-maroon);
+}
+
+#committeeTabs .nav-link.active {
+  background: var(--deep-maroon);
+  color: var(--white);
+  border-color: var(--deep-maroon);
+  position: relative;
+}
+
+#committeeTabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid var(--deep-maroon);
+  z-index: 3;
+}
+
+/* Tab Content */
+.tab-content {
+  padding-top: 20px;
+}
+
 .three-column-section {
   background: url(../images/bg-abstract-pattern-lg.webp) 50% 100% no-repeat #fcf3ea;
   background-size: cover;
@@ -41,4 +128,25 @@
   border: 6px solid var(--yellow);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+  #committeeTabs {
+    flex-direction: column;
+  }
+  
+  #committeeTabs .nav-item {
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  #committeeTabs .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #committeeTabs .nav-link.active::after {
+    display: none;
+  }
 }
