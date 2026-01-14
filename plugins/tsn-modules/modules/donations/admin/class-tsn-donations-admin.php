@@ -41,12 +41,63 @@ class TSN_Donations_Admin {
     }
     
     public function render_donations_page() {
+        // Handle deletion
+        if (isset($_GET['action']) && $_GET['action'] === 'delete_donation' && isset($_GET['donation_id'])) {
+            check_admin_referer('delete_donation_' . $_GET['donation_id']);
+            $this->handle_delete_donation(intval($_GET['donation_id']));
+        }
+
         // Handle offline donation
         if (isset($_POST['tsn_add_offline_donation']) && check_admin_referer('tsn_offline_donation_nonce')) {
             $this->handle_offline_donation($_POST);
         }
         
         include TSN_MODULES_PATH . 'admin/views/donations/list.php';
+    }
+
+    private function handle_delete_donation($donation_id) {
+        global $wpdb;
+        
+        // Get donation details first to update cause totals
+        $donation = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM {$wpdb->prefix}tsn_donations WHERE id = %d",
+            $donation_id
+        ));
+        
+        if (!$donation) {
+            return;
+        }
+        
+        // 1. Update Cause Total (Decrement)
+        if ($donation->cause_id) {
+            $wpdb->query($wpdb->prepare(
+                "UPDATE {$wpdb->prefix}tsn_donation_causes 
+                 SET raised_amount = GREATEST(0, raised_amount - %f) 
+                 WHERE id = %d",
+                $donation->amount,
+                $donation->cause_id
+            ));
+        }
+        
+        // 2. Delete Donation Record
+        $wpdb->delete(
+            $wpdb->prefix . 'tsn_donations',
+            array('id' => $donation_id),
+            array('%d')
+        );
+        
+        // 3. Delete Order Record
+        if ($donation->order_id) {
+            $wpdb->delete(
+                $wpdb->prefix . 'tsn_orders',
+                array('id' => $donation->order_id),
+                array('%d')
+            );
+        }
+        
+        // Redirect with success message
+        echo '<script>window.location.href = "' . admin_url('admin.php?page=tsn-donations&message=deleted') . '";</script>';
+        exit;
     }
     
     public function render_causes_page() {

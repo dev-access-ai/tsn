@@ -42,7 +42,17 @@ $causes = TSN_Donations::get_active_causes();
 
     <?php if (isset($_GET['message'])): ?>
         <div class="notice notice-success">
-            <p><?php echo $_GET['message'] === 'added' ? 'Donation recorded successfully!' : 'Donation updated!'; ?></p>
+            <p>
+                <?php 
+                if ($_GET['message'] === 'added') {
+                    echo 'Donation recorded successfully!';
+                } elseif ($_GET['message'] === 'deleted') {
+                    echo 'Donation deleted successfully!';
+                } else {
+                    echo 'Donation updated!';
+                }
+                ?>
+            </p>
         </div>
     <?php endif; ?>
 
@@ -122,6 +132,13 @@ $causes = TSN_Donations::get_active_causes();
                                 <button type="button" class="button button-small" onclick="emailReceipt(<?php echo $donation->order_id; ?>)" title="Email Receipt">
                                     <span class="dashicons dashicons-email" style="margin-top: 3px;"></span>
                                 </button>
+                                <a href="<?php echo wp_nonce_url(admin_url('admin.php?page=tsn-donations&action=delete_donation&donation_id=' . $donation->id), 'delete_donation_' . $donation->id); ?>" 
+                                   class="button button-small" 
+                                   onclick="return confirm('Are you sure you want to delete this donation? This will remove the record and update the totals. This action cannot be undone.');" 
+                                   title="Delete Donation" 
+                                   style="color: #a00; border-color: #a00;">
+                                    <span class="dashicons dashicons-trash" style="margin-top: 3px;"></span>
+                                </a>
                             </div>
                         </td>
                     </tr>
