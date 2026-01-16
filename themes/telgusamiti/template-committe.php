@@ -76,6 +76,30 @@ get_header();
               <div class="col-md-4 col-lg-4 col">
                 <div class="col-container">
                   <div class="image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/team-member-05.jpg"
+                      alt="AlaganKancharla Chinnappa">
+                  </div>
+                  <div class="content-container">
+                    <h4>AlaganKancharla Chinnappa</h4>
+                    <h5>General Secretary</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 col">
+                <div class="col-container">
+                  <div class="image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/team-member-09.jpg"
+                      alt="Ramesh Rayapati">
+                  </div>
+                  <div class="content-container">
+                    <h4>Ramesh Rayapati</h4>
+                    <h5>Joint Secretary</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4 col">
+                <div class="col-container">
+                  <div class="image-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/team-member-02.jpg" alt="Samba Divvela">
                   </div>
                   <div class="content-container">
@@ -95,30 +119,7 @@ get_header();
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-lg-4 col">
-                <div class="col-container">
-                  <div class="image-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/team-member-05.jpg"
-                      alt="AlaganKancharla Chinnappa">
-                  </div>
-                  <div class="content-container">
-                    <h4>AlaganKancharla Chinnappa</h4>
-                    <h5>General Secretary</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-lg-4 col">
-                <div class="col-container">
-                  <div class="image-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/default-user-image.svg"
-                      alt="Ramesh Rayapati">
-                  </div>
-                  <div class="content-container">
-                    <h4>Ramesh Rayapati</h4>
-                    <h5>Joint Secretary</h5>
-                  </div>
-                </div>
-              </div>
+              
               <div class="col-md-4 col-lg-4 col">
                 <div class="col-container">
                   <div class="image-container">
@@ -164,7 +165,7 @@ get_header();
                 <div class="col-container">
                   <div class="image-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/ec-member-02.jpg"
-                      alt="Anil Pothineni">
+                      alt="Avinash">
                   </div>
                   <div class="content-container">
                     <h4>Avinash</h4>
@@ -186,7 +187,7 @@ get_header();
                 <div class="col-container">
                   <div class="image-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/ec-member-04.jpg"
-                      alt="Anil Pothineni">
+                      alt="Veerendra Mupparaju">
                   </div>
                   <div class="content-container">
                     <h4>Veerendra Mupparaju</h4>
@@ -197,7 +198,7 @@ get_header();
                 <div class="col-container">
                   <div class="image-container">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/ec-member-05.jpg"
-                      alt="Anil Pothineni">
+                      alt="Bala Kamireddy">
                   </div>
                   <div class="content-container">
                     <h4>Bala Kamireddy</h4>
@@ -207,8 +208,8 @@ get_header();
               <div class="col-md-3 col-lg-3 col">
                 <div class="col-container">
                   <div class="image-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/default-user-image.svg"
-                      alt="Anil Pothineni">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/ec-member-06.jpg"
+                      alt="Kranthi Sudha">
                   </div>
                   <div class="content-container">
                     <h4>Kranthi Sudha</h4>
@@ -235,8 +236,8 @@ get_header();
               <div class="col-md-3 col-lg-3 col">
                 <div class="col-container">
                   <div class="image-container">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/default-user-image.svg"
-                      alt="Anil Pothineni">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/director-01.jpg"
+                      alt="Venu Gopal Murakonda">
                   </div>
                   <div class="content-container">
                     <h4>Venu Gopal Murakonda</h4>

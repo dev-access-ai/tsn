@@ -118,6 +118,8 @@ function telugusmiti_scripts()
     wp_enqueue_script('community-swiper', get_template_directory_uri() . '/js/community-swiper.js', array('swiper-js'), '1.0.0', true);
   }
 
+
+
   // Enqueue Membership Page CSS
   if (is_page('membership')) {
     wp_enqueue_style('tsn-membership-style', get_template_directory_uri() . '/css/membership.css', array('telugusmiti-custom-style'), '1.0.0');
