@@ -310,8 +310,7 @@ class TSN_Ticket_QR {
              FROM {$wpdb->prefix}tsn_scans_audit sa
              LEFT JOIN {$wpdb->prefix}tsn_tickets t ON sa.ticket_id = t.id
              WHERE sa.event_id = %d
-             ORDER BY sa.scanned_at DESC
-             LIMIT 50",
+             ORDER BY sa.scanned_at DESC",
             $event_id
         ));
         

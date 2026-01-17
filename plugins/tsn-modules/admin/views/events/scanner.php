@@ -367,8 +367,8 @@ jQuery(document).ready(function($) {
             detail: detail
         });
         
-        // Keep only last 50 scans in memory
-        if (scanHistory.length > 50) {
+        // Keep only last 1000 scans in memory
+        if (scanHistory.length > 1000) {
             scanHistory.pop();
         }
         

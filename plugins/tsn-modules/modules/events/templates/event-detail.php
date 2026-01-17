@@ -11,21 +11,16 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Get event from URL - support both slug and ID
-$event = null;
+// Get event from URL
 $event_slug = get_query_var('event_slug');
+$event = null;
 
 if ($event_slug) {
-    // Get event by slug (SEO-friendly URL)
     global $wpdb;
     $event = $wpdb->get_row($wpdb->prepare(
         "SELECT * FROM {$wpdb->prefix}tsn_events WHERE slug = %s AND status = 'published'",
         $event_slug
     ));
-} elseif (isset($_GET['event_id'])) {
-    // Fallback to event_id for backward compatibility
-    $event_id = intval($_GET['event_id']);
-    $event = TSN_Events::get_event_by_id($event_id);
 }
 
 if (!$event || $event->status !== 'published') {

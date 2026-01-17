@@ -30,6 +30,8 @@ class TSN_Events {
         add_action('wp_ajax_nopriv_tsn_download_tickets', array('TSN_Event_Emails', 'ajax_download_tickets'));
         add_action('wp_ajax_tsn_resend_tickets', array('TSN_Event_Emails', 'ajax_resend_tickets'));
         add_action('wp_ajax_nopriv_tsn_resend_tickets', array('TSN_Event_Emails', 'ajax_resend_tickets'));
+
+
     }
     
     /**
@@ -369,4 +371,6 @@ class TSN_Events {
             wp_send_json_error(array('message' => 'Database error. Please try again.'));
         }
     }
+
+
 }
