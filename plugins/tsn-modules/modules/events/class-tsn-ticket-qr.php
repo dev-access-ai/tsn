@@ -110,9 +110,18 @@ class TSN_Ticket_QR {
         
         // Check if already scanned
         if ($ticket->scanned_at) {
+            try {
+                // Treat stored time as UTC
+                $date = new DateTime($ticket->scanned_at, new DateTimeZone('UTC'));
+                $date->setTimezone(new DateTimeZone('America/Chicago'));
+                $formatted_date = $date->format('M j, Y g:i A T');
+            } catch (Exception $e) {
+                $formatted_date = date('M j, Y g:i A T', strtotime($ticket->scanned_at));
+            }
+
             return array(
                 'valid' => false, 
-                'message' => 'Ticket already scanned at ' . date('M j, Y g:i A', strtotime($ticket->scanned_at)),
+                'message' => 'Ticket already scanned at ' . $formatted_date,
                 'duplicate' => true
             );
         }
@@ -154,7 +163,7 @@ class TSN_Ticket_QR {
         $wpdb->update(
             $wpdb->prefix . 'tsn_tickets',
             array(
-                'scanned_at' => current_time('mysql'),
+                'scanned_at' => current_time('mysql', 1), // Store as GMT
             ),
             array('id' => $ticket_id),
             array('%s'),
@@ -272,8 +281,17 @@ class TSN_Ticket_QR {
         }
         
         if ($ticket->scanned_at) {
+            try {
+                // Treat stored time as UTC
+                $date = new DateTime($ticket->scanned_at, new DateTimeZone('UTC'));
+                $date->setTimezone(new DateTimeZone('America/Chicago'));
+                $formatted_date = $date->format('M j, Y g:i A T');
+            } catch (Exception $e) {
+                $formatted_date = date('M j, Y g:i A T', strtotime($ticket->scanned_at));
+            }
+
             wp_send_json_error(array(
-                'message' => 'Already scanned at ' . date('M j, Y g:i A', strtotime($ticket->scanned_at))
+                'message' => 'Already scanned at ' . $formatted_date
             ));
         }
         
@@ -313,6 +331,19 @@ class TSN_Ticket_QR {
              ORDER BY sa.scanned_at DESC",
             $event_id
         ));
+        
+        // Format dates for display (CST)
+        foreach ($scans as $scan) {
+            try {
+                // Treat stored time as UTC
+                $date = new DateTime($scan->scanned_at, new DateTimeZone('UTC'));
+                $date->setTimezone(new DateTimeZone('America/Chicago'));
+                $scan->formatted_time = $date->format('M j, Y g:i:s A T');
+            } catch (Exception $e) {
+                // Fallback
+                $scan->formatted_time = date('M j, Y g:i:s A', strtotime($scan->scanned_at));
+            }
+        }
         
         wp_send_json_success(array(
             'scans' => $scans

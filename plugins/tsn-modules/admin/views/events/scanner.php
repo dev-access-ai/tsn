@@ -160,7 +160,8 @@ jQuery(document).ready(function($) {
                 if (response.success && response.data.scans) {
                     // Process database scans
                     response.data.scans.forEach(scan => {
-                        const time = new Date(scan.scanned_at).toLocaleTimeString();
+                        // Use server formatted time if available, else fallback
+                        const time = scan.formatted_time || new Date(scan.scanned_at).toLocaleString();
                         const isValid = scan.result === 'valid';
                         
                         scanHistory.push({
@@ -356,7 +357,15 @@ jQuery(document).ready(function($) {
     }
 
     function addToHistory(type, data, detail) {
-        const time = new Date().toLocaleTimeString();
+        // Generate CST time for new scans
+        const time = new Date().toLocaleString('en-US', {
+            timeZone: 'America/Chicago',
+            year: 'numeric', month: 'short', day: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: true,
+            timeZoneName: 'short'
+        });
+
         const icon = type === 'success' ? '✓' : '✗';
         const className = type === 'success' ? 'success' : 'error';
         

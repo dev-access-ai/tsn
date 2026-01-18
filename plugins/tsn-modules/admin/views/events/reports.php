@@ -520,11 +520,9 @@ $view_event_id = isset($_GET['view_event_id']) ? intval($_GET['view_event_id']) 
                         // Quick stats for overview
                         $stats = $wpdb->get_row($wpdb->prepare(
                             "SELECT 
-                                COALESCE(SUM(o.total), 0) as total_revenue,
-                                COUNT(t.id) as tickets_sold
-                             FROM {$wpdb->prefix}tsn_orders o
-                             LEFT JOIN {$wpdb->prefix}tsn_tickets t ON o.id = t.order_id
-                             WHERE o.event_id = %d AND (o.status = 'completed' OR o.status = 'paid')",
+                                (SELECT COALESCE(SUM(total), 0) FROM {$wpdb->prefix}tsn_orders WHERE event_id = %d AND (status = 'completed' OR status = 'paid')) as total_revenue,
+                                (SELECT COUNT(id) FROM {$wpdb->prefix}tsn_tickets WHERE event_id = %d AND status != 'void') as tickets_sold",
+                            $event->id,
                             $event->id
                         ));
                         
