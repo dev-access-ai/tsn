@@ -34,11 +34,6 @@ get_header();
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="ec-members-tab" data-bs-toggle="tab" data-bs-target="#ec-members" type="button" role="tab" aria-controls="ec-members" aria-selected="false">
-              EC Members
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
             <button class="nav-link" id="board-tab" data-bs-toggle="tab" data-bs-target="#board" type="button" role="tab" aria-controls="board" aria-selected="false">
               Board of Directors
             </button>
@@ -145,11 +140,12 @@ get_header();
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- EC Members Tab -->
-          <div class="tab-pane fade" id="ec-members" role="tabpanel" aria-labelledby="ec-members-tab">
-            <div class="row">
+            <div class="section-title">
+              <h3>Committee Members</h3>
+            </div>
+
+             <div class="row">
               <div class="col-md-3 col-lg-3 col">
                 <div class="col-container">
                   <div class="image-container">
@@ -218,7 +214,7 @@ get_header();
               </div>
             </div>
           </div>
-
+         
           <!-- Board of Directors Tab -->
           <div class="tab-pane fade" id="board" role="tabpanel" aria-labelledby="board-tab">
             <div class="row">

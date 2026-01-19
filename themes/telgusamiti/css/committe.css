@@ -130,6 +130,18 @@
   border-radius: 50%;
 }
 
+#committeeTabsContent .section-title h3 {
+  text-align: center;
+}
+
+#committeeTabsContent .section-title h3:before {
+  margin: 0 auto 10px;
+}
+
+#committeeTabsContent .section-title h3:after {
+  margin: 10px auto 0;
+}
+
 /* Responsive Tabs */
 @media (max-width: 768px) {
   #committeeTabs {
